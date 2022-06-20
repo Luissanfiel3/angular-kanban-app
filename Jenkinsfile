@@ -1,15 +1,13 @@
- stage('Build') {
-        steps {
-           script{
-             if(params.SKIP_TESTS){
-               sh 'npm install'
-               sh 'npm run build:${ENV}'
-             }else{
-               sh 'npm install'
-               sh 'npm run test'
-               sh 'npm run build:${ENV}'
-                    }
-                  }
-               }
-             }
+node {  
+    stage('Build') { 
+        // 
+       sh 'npm install'
+    }
+    stage('Test') { 
+        // 
+    }
+    stage('Deploy') { 
+        // 
+    }
+}
 
